@@ -186,7 +186,19 @@ public class MusicOrganizer
     }
 
     }
-    
+    public class Track {
+    private String name;
+
+    public Track(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+}
+
     /**
      * question 27, play samples of all tracks by particular artist.
      */
@@ -205,5 +217,16 @@ public class MusicOrganizer
         System.out.println("No tracks found for artist: " + artist);
     }
     
+    }
+    
+    /**
+     * Question 28, example for each loop for ArrayList<Track>
+     */
+    public void processTracks(ArrayList<Track> tracklist)
+    {
+        // Each loop header
+        for (Track track : tracklist)
+            //Loop body: just print the track
+            System.out.println(track);
     }
 }
