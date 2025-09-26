@@ -134,6 +134,7 @@ public class MusicOrganizer
             System.out.println("Index cannot be negative: " + index);
             valid = false;
         }
+
         else if(index >= files.size()) {
             System.out.println("Index is too large: " + index);
             valid = false;
@@ -163,5 +164,24 @@ public class MusicOrganizer
         // Test listing with index
         System.out.println("\nFiles with index:");
         music.listwithIndex();
+    }
+
+    /**
+     * List files searchString
+     */
+    public void listMatching(String searchString)
+    {
+            boolean found = false;  // to check if any matches were found
+    for(String filename : files) {
+        if(filename.contains(searchString)) {
+            System.out.println(filename);
+            found = true;
+        }
+    }
+    if(!found) {
+        System.out.println("No matching files found.");
+   
+    }
+
     }
 }
