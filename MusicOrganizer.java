@@ -172,12 +172,14 @@ public class MusicOrganizer
     public void listMatching(String searchString)
     {
             boolean found = false;  // to check if any matches were found
+    // Loop through all filenames
     for(String filename : files) {
         if(filename.contains(searchString)) {
-            System.out.println(filename);
-            found = true;
+            System.out.println(filename); // print matching file
+            found = true;                 // mark that a match was found
         }
     }
+    //After loop, verify if no matches were found
     if(!found) {
         System.out.println("No matching files found.");
    
