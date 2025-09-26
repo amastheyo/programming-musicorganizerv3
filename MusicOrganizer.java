@@ -186,4 +186,24 @@ public class MusicOrganizer
     }
 
     }
+    
+    /**
+     * question 27, play samples of all tracks by particular artist.
+     */
+    public void playAllByArtist(String artist)
+    {
+        boolean found = false; // tracks matching files 
+        
+        for(String filename : files) {
+            if(filename.contains(artist)) { //check if filename has artist name
+               player.playSample(filename); //play beginning of track
+               found = true;
+            }
+    }
+    
+    if(!found) {
+        System.out.println("No tracks found for artist: " + artist);
+    }
+    
+    }
 }
