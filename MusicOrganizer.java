@@ -143,4 +143,25 @@ public class MusicOrganizer
         }
         return valid;
     }
+    
+    /**
+     * Testing MusicOrganizer
+     */
+    public static void main(String[] args)
+    {
+         MusicOrganizer music = new MusicOrganizer();
+        
+        // Add some files to the collection
+        music.addFile("Burning man.mp3");
+        music.addFile("Livid.mp3");
+        music.addFile("Maverick.mp3");
+        
+        // Test listing all files
+        System.out.println("All files:");
+        music.listAllFiles();
+        
+        // Test listing with index
+        System.out.println("\nFiles with index:");
+        music.listwithIndex();
+    }
 }
